@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='canvas-area'>
+    <canvas style="width: {{canvasWidth}}px; height: {{canvasHeight}}px;" canvas-id="myCanvas" class='canvas' bindtouchstart="canvasStart" bindtouchmove="canvasMove" bindtouchend="canvasEnd" disable-scroll="true"></canvas>
+  </view>
+  <view class='canvas-tool'>
+    <view class='thickness'>
+      <view class='cir thickness-one' bindtap='changeBrushThickness' data-thickness='5'></view>
+      <view class='cir thickness-two' bindtap='changeBrushThickness' data-thickness='10'></view>
+      <view class='cir thickness-three' bindtap='changeBrushThickness' data-thickness='15'></view>
+    </view>
+    <view class='color'>
+      <view class='col red' bindtap='changeBrushColor' data-color='red'></view>
+      <view class='col blue' bindtap='changeBrushColor' data-color='blue'></view>
+      <view class='col yellow' bindtap='changeBrushColor' data-color='yellow'></view>
+    </view>
+    <text bindtap='changeBrush'>画笔</text>
+    <text bindtap='changeEraser'>橡皮擦</text>
+    <text bindtap='clearAll'>清屏</text>
+  </view>
+</view>
